@@ -1,14 +1,18 @@
 package RestAPISpringBootWithDynamoDb.service;
 
-import RestAPISpringBootWithDynamoDb.entity.TestTeam;
+import RestAPISpringBootWithDynamoDb.model.TestTeam;
 import RestAPISpringBootWithDynamoDb.exception.EntityNotFoundException;
 import RestAPISpringBootWithDynamoDb.repository.TestTeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 /*Adding a service layer (TestTeamService class) to implement all the business logic for the CRUD operations.
+Spring @Service annotation is used with classes that provide some business functionalities.
+Spring context will autodetect these classes when annotation-based configuration and classpath scanning is used.
 Also, included custom exception handling for Entity Not Found scenarios.*/
+@Service
 public class TestTeamService {
 
     /*Spring @Autowired annotation is used for automatic dependency injection. Spring framework is built on dependency
@@ -17,6 +21,7 @@ public class TestTeamService {
     is equivalent to using @Configuration, @EnableAutoConfiguration, and @ComponentScan.*/
     @Autowired
     TestTeamRepository testTeamRepository;
+
 
     public Iterable<TestTeam> getTestTeamAll() {
         return testTeamRepository.findAll();

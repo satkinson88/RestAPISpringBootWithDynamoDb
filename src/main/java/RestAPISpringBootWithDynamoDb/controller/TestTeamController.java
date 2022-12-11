@@ -1,6 +1,6 @@
 package RestAPISpringBootWithDynamoDb.controller;
 
-import RestAPISpringBootWithDynamoDb.entity.TestTeam;
+import RestAPISpringBootWithDynamoDb.model.TestTeam;
 import RestAPISpringBootWithDynamoDb.service.TestTeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

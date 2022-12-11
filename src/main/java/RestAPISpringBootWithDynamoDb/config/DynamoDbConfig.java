@@ -10,6 +10,7 @@ import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRep
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 /*Spring @Configuration annotation indicates that the class has @Bean definition methods. So Spring container
 can process the class and generate Spring Beans to be used in the application. Spring @Configuration annotation

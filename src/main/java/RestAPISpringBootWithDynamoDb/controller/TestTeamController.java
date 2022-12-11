@@ -21,12 +21,13 @@ import java.util.TreeMap;
  In Spring-MVC when you write annotation like @Controller or @RestController, indirectly you are using a Servlet
  called Dispatcher Servlet. Dispatcher Servlet is defined in web.xml file.
 
- A servlet is simply a class which responds to a particular type of network request - most commonly an HTTP request.
- Basically servlets are usually used to implement web applications - but there are also various frameworks which
- operate on top of servlets (e.g. Struts) to give a higher-level abstraction than the "here's an HTTP request,
- write to this HTTP response" level which servlets provide. Servlets run in a servlet container which handles
- the networking side (e.g. parsing an HTTP request, connection handling etc). One of the best-known open source
- servlet containers is Tomcat.*/
+ DispatcherServlet acts as the Front Controller for Spring-based web applications. So now what is Front Controller?
+ Any request is going to come into our website the front controller is going to stand in front and is going to accept
+ all the requests and once the front controller accepts that request then this is the job of the front controller that
+ it will make a decision that who is the right controller to handle that request. Servlets run in a servlet container
+ which handles the networking side (e.g. parsing an HTTP request, connection handling etc).
+
+ - Spring boot uses Apache Tomcat by default as its servlet container (where servlets run). */
 
 
 @RestController

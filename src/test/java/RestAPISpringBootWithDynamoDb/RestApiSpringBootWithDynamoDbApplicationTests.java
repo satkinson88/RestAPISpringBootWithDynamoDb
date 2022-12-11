@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestApiSpringBootWithDynamoDbApplicationTests {
+public class RestApiSpringBootWithDynamoDbApplicationTests {
 
 	@Autowired
 	private TestTeamService testTeamService;
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 	@Test
-	void testAddTestTeamMember(){
+	public void testAddTestTeamMember(){
 		TestTeam testTeam = new TestTeam();
 		testTeam.setId("1234");
 		testTeam.setFirstName("Stewart");
